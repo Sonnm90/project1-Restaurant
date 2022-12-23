@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương trình khuyễn mại</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/68734f4fab.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            object-fit: cover;
+            gap: 1rem;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <a href="#" class="logo"><img src="/images/logo-thai.png" alt=""></a>
+        <nav class="navbar">
+            <a href="./index.html"> <i class="fa fa-home" aria-hidden="true"></i> TRANG CHỦ</a>
+            <a href="./menu.html">THỰC ĐƠN</a>
+            <a href="./saleMenu.html">KHUYẾN MẠI</a>
+            <a href="./booking.html">ĐẶT BÀN</a>
+            <a href="#review">PHẢN HỒI</a>
+            <a href="#contact">LIÊN HỆ</a>
+        </nav>
+        <div class="icons" id="user">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="user-btn"></i>
+            <div class="dropdown">
+                <ul>
+                    <li><i class="fas fa-user myMenu" id="dropdownIcon"></i>
+                        <ul>
+                            <li> <a href="#">Hồ sơ cá nhân</a></li>
+                            <li><a href="./myfavortice.html">My Favortice</a></li>
+                            <li><a href="./mybooking.html">My Booking</a></li>
+                            <li><a href="" id="logOut">Log Out</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <span id="textLog">
+                ĐĂNG NHẬP</span>
+        </div>
+        <div class="login-form-container">
+            <i class="fas fa-times" id="form-close"></i>
+
+            <form action="" id="form-login" class="loginForm">
+                <h3>login</h3>
+                <input type="email" id="email" class="box" placeholder="enter your email" />
+                <input type="password" id="password" class="box" placeholder="enter your password" />
+                <input type="submit" id="login-Btn" value="login now" class="btn" />
+                <input type="checkbox" id="remember" />
+                <label for="remember">remember me</label>
+                <p>forget password? <a href="./change&forgotPas.html">Nhấn vào đây</a></p>
+                <p>don't have and account? <a href="./register.html">Đăng ký</a></p>
+            </form>
+        </div>
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" onchange="searchData()" placeholder="search here..." />
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    </header>
+    <div class="container" id="showslide">
+        <a class="prev" onclick="plusSlides(-1)"></a>
+        <a class="next" onclick="plusSlides(1)"></a>
+    </div>
+    <section class="gallery" id="gallery">
+        <h1 class="heading">
+            <span>K</span>
+            <span>H</span>
+            <span>U</span>
+            <span>Y</span>
+            <span>Ế</span>
+            <span>N</span>
+            <span class="space"></span>
+            <span>M</span>
+            <span>Ạ</span>
+            <span>I</span>
+        </h1>
+        <div class="box-container" id="showGallery">
+        </div>
+    </section>
+</body>
+<script src="./js/script.js"></script>
+<script src="./js/login.js"></script>
+<script src="./js/userAct.js"></script>
+<script src="./js/renderSaleMenu.js"></script>
+<script src="./js/slideshow.js"></script>
+
+
+</html>

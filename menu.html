@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực đơn nhà hàng</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://kit.fontawesome.com/68734f4fab.js" crossorigin="anonymous"></script>
+    <style>
+        h3 {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        select {
+            width: 30%;
+            height: 10%;
+            padding: 1%;
+            font-size: 1rem;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        .optionList {
+            margin-bottom: 5%;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><img src="/images/logo-thai.png" alt=""></a>
+
+        <nav class="navbar">
+            <a href="./index.html"> <i class="fa fa-home" aria-hidden="true"></i> TRANG CHỦ</a>
+            <a href="./menu.html">THỰC ĐƠN</a>
+            <a href="./saleMenu.html">KHUYẾN MẠI</a>
+            <a href="./booking.html">ĐẶT BÀN</a>
+            <a href="#review">PHẢN HỒI</a>
+            <a href="#contact">LIÊN HỆ</a>
+            <!-- <a href="./register.html">Đăng nh</a> -->
+        </nav>
+
+
+        <div class="icons" id="user">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="user-btn"></i>
+
+            <div class="dropdown">
+                <ul>
+                    <li><i class="fas fa-user myMenu" id="dropdownIcon"></i>
+                        <ul>
+                            <li> <a href="#">Hồ sơ cá nhân</a></li>
+                            <li><a href="./myfavortice.html">My Favortice</a></li>
+                            <li><a href="./mybooking.html">My Booking</a></li>
+                            <li><a href="" id="logOut">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <span id="textLog">
+                ĐĂNG NHẬP</span>
+        </div>
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" onchange="searchData()" placeholder="search here..." />
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    </header>
+    <div class="login-form-container">
+        <i class="fas fa-times" id="form-close"></i>
+
+        <form action="" id="form-login" class="loginForm">
+            <h3>login</h3>
+            <input type="email" id="email" class="box" placeholder="enter your email" />
+            <input type="password" id="password" class="box" placeholder="enter your password" />
+            <input type="submit" id="login-Btn" value="login now" class="btn" />
+            <input type="checkbox" id="remember" />
+            <label for="remember">remember me</label>
+            <p>forget password? <a href="./change&forgotPas.html">Nhấn vào đây</a></p>
+            <p>don't have and account? <a href="./register.html">Đăng ký</a></p>
+        </form>
+    </div>
+
+    <div class='banner'>
+        <img src="/images/sl1.jpg" style="width: 100%">
+    </div>
+
+    <div class="optionList">
+        <h3>CHỌN NHÀ HÀNG</h3>
+        <select name="listRestaurant" id="">
+            <option value="" style="text-align: center;">---Chọn nhà hàng---</option>
+            <option value="">Thaiexpress 3, 24T2 Trung Hòa Nhân Chính, Cầu Giấy, Hà Nội</option>
+            <option value="">Thaiexpress 5, T5, Vincom Center, 191 Bà Triệu, Hai Bà Trưng, Hà Nội</option>
+            <option value="">Thaiexpress 7, Tầng B2, Royal City, 72A Nguyễn Trãi, Thanh Xuân, Hà Nội</option>
+            <option value="">Thaiexpress 11, Tầng 1 Tòa nhà Mipec 229 Tây Sơn, Đống Đa</option>
+            <option value="">Thaiexpress 15, Tầng 3 TTTM Aeon Mall Long Biên, số 27 đường Cổ Linh, Long Biên, Hà Nội
+            </option>
+            <option value="">Thaiexpress 17, Tầng 5 TTTM Vincom Nguyễn Chí Thanh, 54A - 56 Nguyễn Chí Thanh, Đống Đa, Hà
+                Nội</option>
+        </select>
+        <h3>CHỌN MENU</h3>
+        <select class="listMenu" id="">
+            <option value="" style="text-align: center;">---Chọn menu---</option>
+            <option value="">Set Lunch</option>
+            <option value="">Menu cải tiến</option>
+        </select>
+    </div>
+    <div class="setlunch">
+
+    </div>
+    <div class="listMenu">
+
+    </div>
+
+</body>
+
+<script src="./js/script.js"></script>
+<script src="./js/login.js"></script>
+<script src="./js/userAct.js"></script>
+
+
+</html>

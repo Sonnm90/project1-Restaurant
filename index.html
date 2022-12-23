@@ -1,0 +1,217 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ - Chuỗi Nhà Hàng ThaiExpress</title>
+
+    <!-- font awesome cdn link  -->
+    <script src="https://kit.fontawesome.com/68734f4fab.js" crossorigin="anonymous"></script>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="./js/jquery-3.6.1.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+    <!-- header section starts  -->
+
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"><img src="/images/logo-thai.png" alt=""></a>
+
+        <nav class="navbar">
+            <a href="./index.html"> <i class="fa fa-home" aria-hidden="true"></i> TRANG CHỦ</a>
+            <a href="./menu.html">THỰC ĐƠN</a>
+            <a href="./saleMenu.html">KHUYẾN MẠI</a>
+            <a href="./booking.html">ĐẶT BÀN</a>
+            <a href="#review">PHẢN HỒI</a>
+            <a href="#contact">LIÊN HỆ</a>
+        </nav>
+        <div class="icons" id="user">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="user-btn"></i>
+            <div class="dropdown">
+                <ul>
+                    <li><i class="fas fa-user myMenu" id="dropdownIcon"></i>
+                        <ul>
+                            <li> <a href="#">Hồ sơ cá nhân</a></li>
+                            <li><a href="./myfavortice.html">My Favortice</a></li>
+                            <li><a href="./mybooking.html">My Booking</a></li>
+                            <li><a href="" id="logOut">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <span id="textLog">
+                ĐĂNG NHẬP</span>
+        </div>
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" onchange="searchData()" placeholder="search here..." />
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- login form container  -->
+
+    <div class="login-form-container">
+        <i class="fas fa-times" id="form-close"></i>
+
+        <form action="" id="form-login" class="loginForm">
+            <h3>login</h3>
+            <input type="email" id="email" class="box" placeholder="enter your email" />
+            <input type="password" id="password" class="box" placeholder="enter your password" />
+            <input type="submit" id="login-Btn" value="login now" class="btn" />
+            <input type="checkbox" id="remember" />
+            <label for="remember">remember me</label>
+            <p>forget password? <a href="./change&forgotPas.html">Nhấn vào đây</a></p>
+            <p>don't have and account? <a href="./register.html">Đăng ký</a></p>
+        </form>
+    </div>
+    <!-- home section starts  -->
+
+    <div class="container" id="showslide">
+        <a class="prev" onclick="plusSlides(-1)"></a>
+        <a class="next" onclick="plusSlides(1)"></a>
+    </div>
+    <!-- home section ends -->
+
+    <!-- packages section starts  -->
+
+    <section class="packages" id="packages">
+        <h1 class="heading">
+            <span>M</span>
+            <span>Ó</span>
+            <span>N</span>
+            <span class="space"></span>
+            <span>Ă</span>
+            <span>N</span>
+            <span class="space"></span>
+            <span>Đ</span>
+            <span>Ặ</span>
+            <span>C</span>
+            <span class="space"></span>
+            <span>S</span>
+            <span>Ắ</span>
+            <span>C</span>
+
+        </h1>
+
+        <div class="box-container" id="showProduct">
+        </div>
+    </section>
+
+    <!-- packages section ends -->
+
+    <!-- gallery section starts  -->
+
+    <section class="gallery" id="gallery">
+        <h1 class="heading">
+            <span>K</span>
+            <span>H</span>
+            <span>U</span>
+            <span>Y</span>
+            <span>Ế</span>
+            <span>N</span>
+            <span class="space"></span>
+            <span>M</span>
+            <span>Ạ</span>
+            <span>I</span>
+        </h1>
+        <div class="box-container" id="showGallery">
+        </div>
+    </section>
+
+    <!-- gallery section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+        <h1 class="heading">
+            <span>P</span>
+            <span>H</span>
+            <span>Ả</span>
+            <span>N</span>
+            <span class="space"></span>
+            <span>H</span>
+            <span>Ồ</span>
+            <span>I</span>
+        </h1>
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+        <h1 class="heading">
+            <span>L</span>
+            <span>I</span>
+            <span>Ê</span>
+            <span>N</span>
+            <span class="space"></span>
+            <span>H</span>
+            <span>Ệ</span>
+        </h1>
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- brand section  -->
+
+    <!-- footer section  -->
+
+    <section class="footer">
+        <div class="box-container" id="contact">
+            <div class="box">
+                <h3>Giới thiệu:</h3>
+                <p>
+                    CHUỖI NHÀ HÀNG THÁI HIỆN ĐẠI LỚN NHẤT THẾ GIỚI
+                    Phương châm của chúng tôi: Tất cả vì khách hàng.
+                    Từ chính mong muốn của khách hàng là được thưởng thức các món ăn trong một không gian thoải mái,
+                    lịch sự, sang trọng và ấm cúng, được trải nghiệm những món ăn đặc sản chính thống của Thái với mức
+                    giá hợp lý nhất.
+                    Sự diễn tả rõ nét ẩm thực Thái Lan thể hiện từ cách trình bày độc đáo các món ăn đến hương vị của
+                    từng món.
+                    Cho đến thời điểm này, chúng tôi đã thành công với việc phát triển 350 nhà hàng trên 10 nước trong
+                    vòng 8 năm (Úc, Trung Quốc, Ấn Độ, Indonesia, Hàn Quốc, Malaisia, Mongolia, Ả rập Xê Út, Singapore
+                    và Việt Nam). Phong
+                    cách ẩm thực, phương châm kinh doanh của ThaiExpress đã thu hút rất nhiều khách hàng từ các quốc gia
+                    trên khắp thế giới.
+                </p>
+            </div>
+            <div class="box">
+                <h3>Chi nhánh</h3>
+                <a href="#">Hà Nội:</a>
+                <a href="#">Đà Nẵng:</a>
+                <a href="#">TP Hồ Chí Minh:</a>
+            </div>
+            <div class="box">
+                <h3>Liên hệ:</h3>
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">twitter</a>
+            </div>
+        </div>
+
+        <h1 class="credit">created by <span> </span> | all rights reserved!</h1>
+    </section>
+
+</body>
+<script src="./js/slideshow.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/showMeals.js"></script>
+<script src="./js/showSaleMenu.js"></script>
+<script src="./js/login.js"></script>
+<script src="./js/userAct.js"></script>
+
+
+<!-- <script src="zoomImg.js"></script> -->
+
+
+</html>

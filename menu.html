@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <script src="https://kit.fontawesome.com/68734f4fab.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.6.1.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
     <style>
         h3 {
             font-size: 1rem;
@@ -25,9 +34,20 @@
             border-radius: 10px;
         }
 
+
+
         .optionList {
             margin-bottom: 5%;
             text-align: center;
+        }
+
+
+
+        #carouselExampleIndicators {
+            width: 80%;
+            margin-left: 10%;
+            object-fit: cover;
+            justify-content: center;
         }
     </style>
 
@@ -55,16 +75,13 @@
             <i class="fas fa-user" id="user-btn"></i>
 
             <div class="dropdown">
-                <ul>
-                    <li><i class="fas fa-user myMenu" id="dropdownIcon"></i>
-                        <ul>
-                            <li> <a href="#">Hồ sơ cá nhân</a></li>
-                            <li><a href="./myfavortice.html">My Favortice</a></li>
-                            <li><a href="./mybooking.html">My Booking</a></li>
-                            <li><a href="" id="logOut">Log Out</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="noidung_dropdown">
+                    <a href="#">Thông tin tài khoản</a>
+                    <a href="#">Danh mục yêu thích</a>
+                    <a href="./userOrder.html">Danh sách đặt bàn</a>
+                    <a href="#" id="logout-Btn">Đăng xuất</a>
+
+                </div>
             </div>
             <span id="textLog">
                 ĐĂNG NHẬP</span>
@@ -92,11 +109,10 @@
     <div class='banner'>
         <img src="/images/sl1.jpg" style="width: 100%">
     </div>
-
     <div class="optionList">
         <h3>CHỌN NHÀ HÀNG</h3>
-        <select name="listRestaurant" id="">
-            <option value="" style="text-align: center;">---Chọn nhà hàng---</option>
+        <select name="listRestaurant" id="listRestaurant">
+            <option value="0" style="text-align: center;">---Chọn nhà hàng---</option>
             <option value="">Thaiexpress 3, 24T2 Trung Hòa Nhân Chính, Cầu Giấy, Hà Nội</option>
             <option value="">Thaiexpress 5, T5, Vincom Center, 191 Bà Triệu, Hai Bà Trưng, Hà Nội</option>
             <option value="">Thaiexpress 7, Tầng B2, Royal City, 72A Nguyễn Trãi, Thanh Xuân, Hà Nội</option>
@@ -107,24 +123,40 @@
                 Nội</option>
         </select>
         <h3>CHỌN MENU</h3>
-        <select class="listMenu" id="">
-            <option value="" style="text-align: center;">---Chọn menu---</option>
-            <option value="">Set Lunch</option>
-            <option value="">Menu cải tiến</option>
+        <select class="listMenu" id="listMenu" onchange="selectMenu()">
+            <option value="0" style="text-align: center;">---Chọn menu---</option>
+            <option value="1">Set Lunch</option>
+            <option value="2">Menu cải tiến</option>
         </select>
     </div>
-    <div class="setlunch">
 
-    </div>
-    <div class="listMenu">
+    <div class="" id="showMenu">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
 
+            <div class="carousel-inner" id="menu">
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
+
+
+
 
 </body>
 
 <script src="./js/script.js"></script>
 <script src="./js/login.js"></script>
 <script src="./js/userAct.js"></script>
-
+<script src="./js/showMenu.js"></script>
 
 </html>

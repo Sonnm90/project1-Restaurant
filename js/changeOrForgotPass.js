@@ -18,12 +18,10 @@ changePass.addEventListener("click", (e) => {
         alert("Đổi mật khẩu thành công");
         break;
       } else {
-        console.log(3);
         alert("Sai mã bảo mật");
         break;
       }
     } else {
-      console.log(2);
       alert("Email chưa đc đăng ký");
     }
   }

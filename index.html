@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="style.css" />
     <script src="./js/jquery-3.6.1.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
 
 </head>
 
@@ -35,16 +39,13 @@
             <i class="fas fa-search" id="search-btn"></i>
             <i class="fas fa-user" id="user-btn"></i>
             <div class="dropdown">
-                <ul>
-                    <li><i class="fas fa-user myMenu" id="dropdownIcon"></i>
-                        <ul>
-                            <li> <a href="#">Hồ sơ cá nhân</a></li>
-                            <li><a href="./myfavortice.html">My Favortice</a></li>
-                            <li><a href="./mybooking.html">My Booking</a></li>
-                            <li><a href="" id="logOut">Log Out</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="noidung_dropdown">
+                    <a href="#">Thông tin tài khoản</a>
+                    <a href="#">Danh mục yêu thích</a>
+                    <a href="./userOrder.html">Danh sách đặt bàn</a>
+                    <a href="#" id="logout-Btn">Đăng xuất</a>
+
+                </div>
             </div>
             <span id="textLog">
                 ĐĂNG NHẬP</span>
@@ -142,6 +143,73 @@
             <span>Ồ</span>
             <span>I</span>
         </h1>
+        <div class="swiper-container review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="./images/avtUser/lehoang.jpg" alt="">
+                        <h3>Lê Hoàng</h3>
+                        <p>Chất lượng rất ok</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="./images/avtUser/minhthu.jpg" alt="">
+                        <h3>john deo</h3>
+                        <p>Chất lượng rất ok</p>
+
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="./images/avtUser/vuongnguyen.jpg" alt="">
+                        <h3>john deo</h3>
+                        <p>Chất lượng rất ok</p>
+
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="./images/avtUser/danhson.jpg" alt="">
+                        <h3>john deo</h3>
+                        <p>Chất lượng rất ok</p>
+
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </section>
 
     <!-- review section ends -->
@@ -208,10 +276,7 @@
 <script src="./js/showMeals.js"></script>
 <script src="./js/showSaleMenu.js"></script>
 <script src="./js/login.js"></script>
-<script src="./js/userAct.js"></script>
-
-
-<!-- <script src="zoomImg.js"></script> -->
-
+<!-- <script src="./js/userAct.js"></script> -->
+<script src="./js/act.js"></script>
 
 </html>

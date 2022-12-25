@@ -10,7 +10,34 @@
     <script src="https://kit.fontawesome.com/68734f4fab.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        #showBookingOrder {
+            display: flex;
+            flex-wrap: wrap;
+            object-fit: cover;
+            gap: 2rem;
+        }
 
+        .cardOrder {
+            width: 40rem;
+            background-color: #fff;
+            padding: 5rem;
+            margin: 2rem auto;
+
+
+
+        }
+
+        .cardOrder label {
+            font-size: 1.5rem;
+            display: inline-block;
+            min-width: 12rem;
+        }
+
+        .cardOrder span {
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -70,49 +97,24 @@
     <section class="book" id="book">
 
         <h1 class="heading">
+            <span>L</span>
+            <span>Ị</span>
+            <span>C</span>
+            <span>H</span>
+            <span class="space"></span>
+            <span>S</span>
+            <span>Ử</span>
+            <span class="space"></span>
             <span>Đ</span>
             <span>Ặ</span>
             <span>T</span>
-
             <span class="space"></span>
             <span>B</span>
             <span>À</span>
             <span>N</span>
         </h1>
 
-        <div class="row">
-
-            <div class="image">
-                <img src="./images/New folder/sv1.jpg" alt="">
-            </div>
-
-            <form action="">
-                <div class=" inputBox">
-                    <h3>Your Name:</h3>
-                    <input type="text" id="inpName" placeholder="Nhập tên">
-                </div>
-                <div class=" inputBox">
-                    <h3>Your Phone:</h3>
-                    <input type="phone" id="inpPhone" placeholder="Nhập số điện thoại">
-                </div>
-                <div class="inputBox">
-                    <h3>No. People:</h3>
-                    <input type="number" id="inpPeople" placeholder="Số lượng người" min="1">
-                </div>
-                <div class="inputBox">
-                    <h3>Choosen Day:</h3>
-                    <input type="date" id="inpDate" >
-                </div>
-                <div class="inputBox">
-                    <h3>Choosen Time:</h3>
-                    <input type="time" id="inpTime">
-                </div>
-                <div class=" inputBox">
-                    <h3>Note:</h3>
-                    <input type="text" id="inpNote" placeholder="Nhập ghi chú">
-                </div>
-                <input type="submit" class="btn" id="bookSubmit" value="ĐẶT NGAY" onclick="booking()">
-            </form>
+        <div id="showBookingOrder">
 
         </div>
 
@@ -122,6 +124,6 @@
 <script src="./js/login.js"></script>
 
 <script src="./js/userAct.js"></script>
-<script src="./js/booking.js"></script>
+<script src="./js/bookingOrder.js"></script>
 
 </html>

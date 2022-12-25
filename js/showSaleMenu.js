@@ -59,7 +59,7 @@ function showSaleMenu(listSaleMenus) {
         <p>
           ${listSaleMenus[i].description}
         </p>
-        <a href="https://thaiexpress.vn/category/tin-tuc/" class="btn">
+        <a href="./saleMenu.html" class="btn">
           XEM THÊM
         </a>
       </div>

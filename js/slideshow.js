@@ -8,7 +8,7 @@ var slidesImg = [
 var saveSlidesImg = JSON.stringify(slidesImg);
 localStorage.setItem("slideshow", saveSlidesImg);
 var slidesListImg = JSON.parse(localStorage.getItem("slideshow"));
-// console.log(slidesListImg);
+
 function renderSlides(slidesImg) {
   let data = "";
 
@@ -22,13 +22,6 @@ function renderSlides(slidesImg) {
 }
 
 renderSlides(slidesListImg);
-
-// slidesListImg.forEach((index) => {
-//    data += ` <div class="mySlides">
-//             <img src="${slidesImg[index]}" style="width: 100%">
-//       </div>
-//      `;
-// });
 
 let a = 1;
 let slideIndex = "";

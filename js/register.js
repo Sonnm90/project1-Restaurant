@@ -231,10 +231,10 @@ Validator.isConfirmed = function (selector, getConfirmValue, message) {
 };
 
 const inpEmail = document.getElementById("inp-Email");
-console.log(inpEmail.value);
+// console.log(inpEmail.value);
 
 const inpPassword = document.getElementById("inp-Password");
-console.log(inpPassword.value);
+// console.log(inpPassword.value);
 
 const inpConfirmPassword = document.getElementById("password_confirmation");
 const btnSubmit = document.getElementById("submit-Btn");
@@ -245,26 +245,28 @@ let submitBtn = document.getElementById("submit-Btn");
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  let objectUser = {
-    email: inpEmail.value,
-    password: inpPassword.value,
-    status: "availability",
-    seccretCode: seccretCode.value,
-  };
   let check = false;
   let listUserRegister = localStorage.getItem("listUserRegister");
 
   if (listUserRegister == null) {
     listUserRegister = [];
+    let objectUser = {
+      email: inpEmail.value,
+      password: inpPassword.value,
+      status: "availability",
+      seccretCode: seccretCode.value,
+    };
     listUserRegister.push(objectUser);
     // console.log(listUserRegister);
     // console.log(JSON.stringify(listUserRegister));
+    var saveUserAct = JSON.stringify(objUserActs);
+    localStorage.setItem(`${inpEmail.value}`, saveUserAct);
     localStorage.setItem("listUserRegister", JSON.stringify(listUserRegister));
     console.log("Đăng ký thành công");
 
     window.location.href = "index.html";
   } else {
-    listUserRegister = JSON.parse(listUserRegister);
+    listUserRegister = JSON.parse(localStorage.getItem("listUserRegister"));
     for (let i = 0; i < listUserRegister.length; i++) {
       if (listUserRegister[i].email == inpEmail.value) {
         check = false;
@@ -274,6 +276,12 @@ submitBtn.addEventListener("click", (e) => {
       }
     }
     if (check == true) {
+      let objectUser = {
+        email: inpEmail.value,
+        password: inpPassword.value,
+        status: "availability",
+        seccretCode: seccretCode.value,
+      };
       listUserRegister.push(objectUser);
       localStorage.setItem(
         "listUserRegister",

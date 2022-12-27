@@ -120,7 +120,7 @@ function upReview() {
       inpReview.value = "";
       listComments.push(comment);
       localStorage.setItem("listComments", JSON.stringify(listComments));
-      getComments();
+
       document.getElementById("marquee").innerHTML = renderMarquee();
     } else {
       listComments = [];
@@ -135,7 +135,7 @@ function upReview() {
       inpReview.value = "";
       listComments.push(comment);
       localStorage.setItem("listComments", JSON.stringify(listComments));
-      getComments();
+
       document.getElementById("marquee").innerHTML = renderMarquee();
     }
   }

@@ -1,5 +1,5 @@
 var getListMeals = JSON.parse(localStorage.getItem("listMeals"));
-console.log(getListMeals);
+// console.log(getListMeals);
 const addImgFood = document.getElementById("addImgFood");
 const renderImgAdd = document.getElementById("renderImgAdd");
 const addNameFood = document.getElementById("addNameFood");

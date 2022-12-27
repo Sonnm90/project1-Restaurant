@@ -232,6 +232,7 @@ Validator.isConfirmed = function (selector, getConfirmValue, message) {
 
 const inpEmail = document.getElementById("inp-Email");
 // console.log(inpEmail.value);
+const inpFullname = document.getElementById("fullname");
 
 const inpPassword = document.getElementById("inp-Password");
 // console.log(inpPassword.value);
@@ -252,15 +253,17 @@ submitBtn.addEventListener("click", (e) => {
     listUserRegister = [];
     let objectUser = {
       email: inpEmail.value,
+      fullname: inpFullname.value,
       password: inpPassword.value,
-      status: "availability",
+      status: "available",
       seccretCode: seccretCode.value,
+      userAvatar: "",
     };
     listUserRegister.push(objectUser);
     // console.log(listUserRegister);
     // console.log(JSON.stringify(listUserRegister));
-    var saveUserAct = JSON.stringify(objUserActs);
-    localStorage.setItem(`${inpEmail.value}`, saveUserAct);
+    // var saveUserAct = JSON.stringify(objUserActs);
+    // localStorage.setItem(`${inpEmail.value}`, saveUserAct);
     localStorage.setItem("listUserRegister", JSON.stringify(listUserRegister));
     console.log("Đăng ký thành công");
 
@@ -278,8 +281,10 @@ submitBtn.addEventListener("click", (e) => {
     if (check == true) {
       let objectUser = {
         email: inpEmail.value,
+        fullname: inpFullname.value,
+
         password: inpPassword.value,
-        status: "availability",
+        status: "available",
         seccretCode: seccretCode.value,
       };
       listUserRegister.push(objectUser);

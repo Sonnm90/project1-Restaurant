@@ -8,6 +8,7 @@
 let objUserAct = JSON.parse(
   localStorage.getItem(`${sessionStorage.getItem("username")}`)
 );
+console.log(objUserAct);
 let listBooking = objUserAct[1];
 
 console.log(listBooking);

@@ -1,4 +1,4 @@
-var listMeals = [
+var saveMeals = [
   {
     id: 1,
     nameMeals: "NHÓM GỎI",
@@ -56,8 +56,8 @@ var listMeals = [
       "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
   },
 ];
-var saveMeals = JSON.stringify(listMeals);
-localStorage.setItem("listMeals", saveMeals);
+
+localStorage.setItem("listMeals", JSON.stringify(saveMeals));
 let listMeals = JSON.parse(localStorage.getItem("listMeals"));
 
 function renderProduct(listMeals) {

@@ -7,14 +7,14 @@ var listBookings = [];
 for (let i = 0; i < listUsers.length; i++) {
   //   console.log(listUsers[i]);
   let objUserAct = JSON.parse(localStorage.getItem(`${listUsers[i].email}`));
-  //   console.log(objUserAct);
+  // console.log(objUserAct);
   let list = objUserAct[1];
   for (let index = 1; index < list.length; index++) {
     listBookings.push(list[index]);
   }
 }
 
-console.log(listBookings);
+// console.log(listBookings);
 
 // var getListBooking = JSON.parse(localStorage.getItem("listBooking"));
 

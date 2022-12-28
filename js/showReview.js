@@ -1,35 +1,35 @@
-var users = [
-  {
-    email: "abcd@gmail.com",
-    fullname: "Lê Hoàng",
-  },
-  {
-    email: "abc@gmail.com",
-    fullname: "Sơn Nguyễn",
-  },
-  {
-    email: "abc123@gmail.com",
-    fullname: "Nguyễn Vượng",
-  },
-];
+// var users = [
+//   {
+//     email: "abcd@gmail.com",
+//     fullname: "Lê Hoàng",
+//   },
+//   {
+//     email: "abc@gmail.com",
+//     fullname: "Sơn Nguyễn",
+//   },
+//   {
+//     email: "abc123@gmail.com",
+//     fullname: "Nguyễn Vượng",
+//   },
+// ];
 
-var comments = [
-  {
-    id: 0,
-    user_Email: "abc@gmail.com",
-    content: "Chất lượng tuyệt vời!",
-  },
-  {
-    id: 1,
-    user_Email: "abcd@gmail.com",
-    content: "Không gian quán rất đẹp!",
-  },
-  {
-    id: 2,
-    user_Email: "abc123@gmail.com",
-    content: "Mình chắc chắn sẽ quay lại",
-  },
-];
+// var comments = [
+//   {
+//     id: 0,
+//     user_Email: "abc@gmail.com",
+//     content: "Chất lượng tuyệt vời!",
+//   },
+//   {
+//     id: 1,
+//     user_Email: "abcd@gmail.com",
+//     content: "Không gian quán rất đẹp!",
+//   },
+//   {
+//     id: 2,
+//     user_Email: "abc123@gmail.com",
+//     content: "Mình chắc chắn sẽ quay lại",
+//   },
+// ];
 function renderMarquee() {
   return `
                 <marquee direction="left">

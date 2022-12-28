@@ -17,7 +17,7 @@ function booking() {
     );
     //   console.log(objUserAct);
 
-    console.log(objUserAct[1]);
+    // console.log(objUserAct[1]);
 
     let bookingOrder = {
       id: sessionStorage.getItem("username"),
@@ -28,9 +28,9 @@ function booking() {
       time: inpTime.value,
       note: inpNote.value,
     };
-    console.log(bookingOrder);
+    // console.log(bookingOrder);
     objUserAct[1].push(bookingOrder);
-    console.log(objUserAct);
+    // console.log(objUserAct);
 
     localStorage.setItem(
       `${sessionStorage.getItem("username")}`,

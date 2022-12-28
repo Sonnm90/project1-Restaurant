@@ -1,5 +1,5 @@
 var listSaleMenus = JSON.parse(localStorage.getItem("listSaleMenu"));
-console.log(listSaleMenus);
+// console.log(listSaleMenus);
 function renderSaleMenu(listSaleMenus) {
   let data = "";
   for (i = 0; i < listSaleMenus.length; i++) {

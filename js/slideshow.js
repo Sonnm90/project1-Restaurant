@@ -1,12 +1,12 @@
-var slidesImg = [
-  "images/sl1.jpg",
-  "images/sl2.jpg",
-  "images/sl3.jpg",
-  "images/sl4.jpg",
-  "images/sl5.jpg",
-];
-var saveSlidesImg = JSON.stringify(slidesImg);
-localStorage.setItem("slideshow", saveSlidesImg);
+// var slidesImg = [
+//   "images/sl1.jpg",
+//   "images/sl2.jpg",
+//   "images/sl3.jpg",
+//   "images/sl4.jpg",
+//   "images/sl5.jpg",
+// ];
+// var saveSlidesImg = JSON.stringify(slidesImg);
+// localStorage.setItem("slideshow", saveSlidesImg);
 var slidesListImg = JSON.parse(localStorage.getItem("slideshow"));
 
 function renderSlides(slidesImg) {

@@ -42,12 +42,29 @@ function showBookingOrder(listBooking) {
 showBookingOrder(listBooking);
 
 function deleteBooking(id) {
-  listBooking.splice(id, 1);
-  console.log(listBooking);
-  localStorage.setItem(
-    `${sessionStorage.getItem("username")}`,
-    JSON.stringify(objUserAct)
-  );
-  swal("Hủy đặt bàn thành công", "", "success");
-  showBookingOrder(listBooking);
+  let listCancels = JSON.parse(localStorage.getItem("listCancels"));
+  if (listCancels != null) {
+    listCancels.push(listBooking[id]);
+    listBooking.splice(id, 1);
+    console.log(listCancels);
+    localStorage.setItem("listCancels", JSON.stringify(listCancels));
+    localStorage.setItem(
+      `${sessionStorage.getItem("username")}`,
+      JSON.stringify(objUserAct)
+    );
+    swal("Hủy đặt bàn thành công", "", "success");
+    showBookingOrder(listBooking);
+  } else {
+    let listCancels = [];
+    listCancels.push(listBooking[id]);
+    listBooking.splice(id, 1);
+    console.log(listCancels);
+    localStorage.setItem("listCancels", JSON.stringify(listCancels));
+    localStorage.setItem(
+      `${sessionStorage.getItem("username")}`,
+      JSON.stringify(objUserAct)
+    );
+    swal("Hủy đặt bàn thành công", "", "success");
+    showBookingOrder(listBooking);
+  }
 }

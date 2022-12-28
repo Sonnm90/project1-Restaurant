@@ -24,15 +24,42 @@
 </head>
 
 <body onscroll="myScroll()">
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
 
-    <!-- ////////          HEADER          //////// -->
-    <div id="header"></div>
+        <a href="#" class="logo"><img src="/images/logo-thai.png" alt=""></a>
 
+        <nav class="navbar">
+            <a href="./index.html"> <i class="fa fa-home" aria-hidden="true"></i> TRANG CHỦ</a>
+            <a href="">USER</a>
+            <a href="./product-managerment.html">SẢN PHẨM</a>
+            <a href="">CHƯƠNG TRÌNH KHUYẾN MẠI</a>
+            <a href="./booking-managerment.html">DANH SÁCH ĐẶT BÀN</a>
+            <!-- <a href="">LIÊN HỆ</a> -->
+        </nav>
+        <div class="icons" id="user">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="user-btn"></i>
+            <div class="dropdown">
+                <div class="noidung_dropdown">
+                    <a href="#">Home page</a>
+                    <a href="#">Admin page</a>
+                    <a href="">Thông tin tài khoản</a>
+                    <a href="#" id="logout-Btn__admin">Đăng xuất</a>
 
-    <!-- ////////          CONTENT          //////// -->
+                </div>
+            </div>
+            <span id="textLog">
+                ĐĂNG NHẬP</span>
+        </div>
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" onchange="searchData()" placeholder="search here..." />
+            <label for="search-bar" class="fas fa-search"></label>
+        </form>
+    </header>
     <div class="container" style="margin-top:180px">
 
-        <h2 class="text-center mt-5" style="letter-spacing:3px">Quản Lý Khách Đặt Bàn</h2>
+        <h2 class="text-center mt-5" style="letter-spacing:3px">DANH SÁCH ĐẶT BÀN</h2>
         <table class="table table-boder mt-5">
             <thead class="text-center">
                 <tr>
@@ -49,7 +76,74 @@
                 </tr>
             </thead>
 
-            <tbody class="text-center">
+            <tbody class="text-center" id="listOrder">
+
+            </tbody>
+        </table>
+
+        <!-- MODAL DETAIL -->
+        <div class="modal modal-lg fade" id="modalDetailOrder" tabindex="-1" aria-labelledby="modalDetailOrderLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title fs-2 card-name" style="flex:9; text-align:center">Thông Tin Đặt Bàn</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body cardOrder">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <label>Mã đặt bàn: </label> <span id="orderDetailId"></span>
+                                <hr>
+                                <label>Người đặt bàn:</label> <span id="orderDetailName"></span>
+                                <hr>
+                                <!-- <label>Địa chỉ Email:</label> <span id="orderDetailEmail"></span> -->
+                                <hr>
+                                <label>Số điện thoại:</label> <span id="orderDetailPhone"></span>
+                                <hr>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <label>Đặt bàn ngày:</label> <span id="orderDetailDate"></span>
+                                <hr>
+                                <label>Giờ đặt bàn:</label>
+                                <span id="orderDetailTime"></span>
+                                <hr>
+                                <label>Số lượng:</label> <span id="orderDetailPeople"></span>
+                                <hr>
+                                <label>Ngày tạo:</label> <span id="orderDetailCreateDate"></span>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label>Ghi chú:</label> <span id="orderDetailNote"></span>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top:180px">
+
+        <h2 class="text-center mt-5" style="letter-spacing:3px">DANH SÁCH HỦY BÀN</h2>
+        <table class="table table-boder mt-5">
+            <thead class="text-center">
+                <tr>
+                    <th>STT</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Booking-Day</th>
+                    <th>Booking-Time</th>
+                    <th>No. People</th>
+                    <th>Note</th>
+
+                    <th colspan="2"></th>
+                </tr>
+            </thead>
+
+            <tbody class="text-center" id="listCancelOrder">
 
             </tbody>
         </table>

@@ -1,27 +1,25 @@
+var setlunchMenus = [
+  "images/menu/Menu-Lunch/11.jpg",
+  "images/menu/Menu-Lunch/12.jpg",
+  "images/menu/Menu-Lunch/13.jpg",
+  "images/menu/Menu-Lunch/14.jpg",
+  "images/menu/Menu-Lunch/15.jpg",
+  "images/menu/Menu-Lunch/16.jpg",
+];
 
+var setcomboMenus = [
+  "images/menu/Combo/1.png",
+  "images/menu/Combo/2.png",
+  "images/menu/Combo/3.png",
+  "images/menu/Combo/4.png",
+  "images/menu/Combo/5.png",
+  "images/menu/Combo/9.png",
+];
 
-// var setlunchMenus = [
-//   "images/menu/Menu-Lunch/11.jpg",
-//   "images/menu/Menu-Lunch/12.jpg",
-//   "images/menu/Menu-Lunch/13.jpg",
-//   "images/menu/Menu-Lunch/14.jpg",
-//   "images/menu/Menu-Lunch/15.jpg",
-//   "images/menu/Menu-Lunch/16.jpg",
-// ];
-
-// var setcomboMenus = [
-//   "images/menu/Combo/1.png",
-//   "images/menu/Combo/2.png",
-//   "images/menu/Combo/3.png",
-//   "images/menu/Combo/4.png",
-//   "images/menu/Combo/5.png",
-//   "images/menu/Combo/9.png",
-// ];
-
-// var lunchMenus = JSON.stringify(setlunchMenus);
-// localStorage.setItem("lunchMenus", lunchMenus);
-// var comboMenus = JSON.stringify(setcomboMenus);
-// localStorage.setItem("setcomboMenus", comboMenus);
+var lunchMenus = JSON.stringify(setlunchMenus);
+localStorage.setItem("lunchMenus", lunchMenus);
+var comboMenus = JSON.stringify(setcomboMenus);
+localStorage.setItem("setcomboMenus", comboMenus);
 
 var setlunchMenus = JSON.parse(localStorage.getItem("lunchMenus"));
 console.log(setlunchMenus);

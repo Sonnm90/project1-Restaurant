@@ -252,6 +252,7 @@ submitBtn.addEventListener("click", (e) => {
   if (listUserRegister == null) {
     listUserRegister = [];
     let objectUser = {
+      id: new Date().getTime(),
       email: inpEmail.value,
       fullname: inpFullname.value,
       password: inpPassword.value,
@@ -280,6 +281,7 @@ submitBtn.addEventListener("click", (e) => {
     }
     if (check == true) {
       let objectUser = {
+        id: new Date().getTime(),
         email: inpEmail.value,
         fullname: inpFullname.value,
 

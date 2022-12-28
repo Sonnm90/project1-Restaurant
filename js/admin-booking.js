@@ -1,5 +1,6 @@
 var listUsers = JSON.parse(localStorage.getItem("listUserRegister"));
 // console.log(listUsers);
+var listCancels = JSON.parse(localStorage.getItem("listCancels"));
 
 var listBookings = [];
 
@@ -46,16 +47,42 @@ function renderTableOrder(listBookings) {
                     <td>
                    </td>
                     <td>
-                        <button class="btn btn-danger w-100" onclick="deleteOrder(${
-                          listBookings[i].id
-                        })"><i class="fa-solid fa-trash"></i></button>
+                        <button class="btn btn-danger w-100" onclick="deleteOrder(${i})"><i class="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>
              `;
   }
-  document.querySelector("tbody").innerHTML = renderTableOrder;
+  document.getElementById("listOrder").innerHTML = renderTableOrder;
 }
 renderTableOrder(listBookings);
+
+function renderCancelOrder(listCancels) {
+  let renderTableOrder = "";
+
+  for (let i = 0; i < listCancels.length; i++) {
+    renderTableOrder += `
+                <tr>
+                    <td>${i + 1}</td>
+                
+                    <td>${listCancels[i].name}</td>
+                    <td>${listCancels[i].id}</td>
+                    <td>${listCancels[i].phone}</td>
+                    <td>${listCancels[i].date}</td>
+                    <td>${listCancels[i].time}</td>
+                    <td>${listCancels[i].people} người</td>
+                    <td>${listCancels[i].note} </td>
+
+                    <td>
+                   </td>
+                    <td>
+                        <button class="btn btn-danger w-100" onclick="deleteCancelOrder(${i})"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+             `;
+  }
+  document.getElementById("listCancelOrder").innerHTML = renderTableOrder;
+}
+renderCancelOrder(listCancels);
 
 // function detailOrder(paramId) {
 //   for (let i = 0; i < listBookings.length; i++) {
@@ -71,12 +98,12 @@ renderTableOrder(listBookings);
 //   }
 // }
 
-// function deleteOrder(paramId) {
-//   for (let i = 0; i < listBookings.length; i++) {
-//     if (listBookings[i].id == paramId) {
-//       listBookings.splice(i, 1);
-//       localStorage.setItem("listBooking", JSON.stringify(listBookings));
-//       renderTableOrder(listBookings);
+// function deleteCancelOrder(paramId) {
+//   for (let i = 0; i < listCancels.length; i++) {
+//     if (listCancels[i].id == paramId) {
+//       listCancels.splice(i, 1);
+//       localStorage.setItem("listCancels", JSON.stringify(listCancels));
+//       renderCancelOrder(listCancels);
 //     }
 //   }
 // }

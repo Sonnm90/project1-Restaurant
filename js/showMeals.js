@@ -1,63 +1,63 @@
-// var listMeals = [
-//   {
-//     id: 1,
-//     nameMeals: "NHÓM GỎI",
-//     img: "images/imgsMeals/hot1.jpg",
-//     description:
-//       "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
-//   },
-//   {
-//     id: 2,
-//     nameMeals: "CƠM CHIÊN DỨA HẢI SẢN",
-//     img: "images/imgsMeals/hot2.jpg",
-//     description:
-//       "Món cơm chiên kiểu Thái với những hạt cơm được rang giòn quyện đều với trứng đượm màu vàng, có mùi thơm mùi dứa, chua chua, ngọt ngọt, kết hợp với đậu hà lan, ...",
-//   },
-//   {
-//     id: 3,
-//     nameMeals: "CÀ RI ĐỎ HẢI SẢN",
-//     img: "images/imgsMeals/hot3.jpg",
-//     description:
-//       "Hải sản và cà ri tưởng chừng như không liên quan với nhau, ấy vậy mà khi được nấu chung một nồi lại trở thành món mới có hương vị thơm ngon độc đáo.",
-//   },
-//   {
-//     id: 4,
-//     nameMeals: "MIẾN ÁP CHẢO HẢI SẢN",
-//     img: "images/imgsMeals/hot4.jpg",
-//     description:
-//       "Miến áp chảo hải sản với nấm. Ngoài miến áp chảo hải sản với nấm, bạn có thể chọn miến xào tôm và trứng sốt cà chua đặc biệt. Đúng như tên ...",
-//   },
-//   {
-//     id: 5,
-//     nameMeals: "MASAMAN GÀ",
-//     img: "images/imgsMeals/hot5.jpg",
-//     description:
-//       "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
-//   },
-//   {
-//     id: 6,
-//     nameMeals: "HỦ TIẾU XÀO HẢI SẢN",
-//     img: "images/imgsMeals/hot6.jpg",
-//     description:
-//       "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
-//   },
-//   {
-//     id: 7,
-//     nameMeals: "MIẾN NƯỚC SUKIYAKI & HẢI SẢN",
-//     img: "./images/imgsMeals/hot7.jpg",
-//     description:
-//       "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
-//   },
-//   {
-//     id: 8,
-//     nameMeals: "LẨU THÁI",
-//     img: "images/imgsMeals/hot8.jpg",
-//     description:
-//       "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
-//   },
-// ];
-// var saveMeals = JSON.stringify(listMeals);
-// localStorage.setItem("listMeals", saveMeals);
+var listMeals = [
+  {
+    id: 1,
+    nameMeals: "NHÓM GỎI",
+    img: "images/imgsMeals/hot1.jpg",
+    description:
+      "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
+  },
+  {
+    id: 2,
+    nameMeals: "CƠM CHIÊN DỨA HẢI SẢN",
+    img: "images/imgsMeals/hot2.jpg",
+    description:
+      "Món cơm chiên kiểu Thái với những hạt cơm được rang giòn quyện đều với trứng đượm màu vàng, có mùi thơm mùi dứa, chua chua, ngọt ngọt, kết hợp với đậu hà lan, ...",
+  },
+  {
+    id: 3,
+    nameMeals: "CÀ RI ĐỎ HẢI SẢN",
+    img: "images/imgsMeals/hot3.jpg",
+    description:
+      "Hải sản và cà ri tưởng chừng như không liên quan với nhau, ấy vậy mà khi được nấu chung một nồi lại trở thành món mới có hương vị thơm ngon độc đáo.",
+  },
+  {
+    id: 4,
+    nameMeals: "MIẾN ÁP CHẢO HẢI SẢN",
+    img: "images/imgsMeals/hot4.jpg",
+    description:
+      "Miến áp chảo hải sản với nấm. Ngoài miến áp chảo hải sản với nấm, bạn có thể chọn miến xào tôm và trứng sốt cà chua đặc biệt. Đúng như tên ...",
+  },
+  {
+    id: 5,
+    nameMeals: "MASAMAN GÀ",
+    img: "images/imgsMeals/hot5.jpg",
+    description:
+      "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
+  },
+  {
+    id: 6,
+    nameMeals: "HỦ TIẾU XÀO HẢI SẢN",
+    img: "images/imgsMeals/hot6.jpg",
+    description:
+      "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
+  },
+  {
+    id: 7,
+    nameMeals: "MIẾN NƯỚC SUKIYAKI & HẢI SẢN",
+    img: "./images/imgsMeals/hot7.jpg",
+    description:
+      "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
+  },
+  {
+    id: 8,
+    nameMeals: "LẨU THÁI",
+    img: "images/imgsMeals/hot8.jpg",
+    description:
+      "Gỏi lại xuất phát từ các nguyên liệu gần gũi, dễ tìm như ngó sen, hành tây, đậu phộng, xoài, cóc và các loại rau thơm khác như càng cua, tía tô, rau quế, ngò gai.",
+  },
+];
+var saveMeals = JSON.stringify(listMeals);
+localStorage.setItem("listMeals", saveMeals);
 let listMeals = JSON.parse(localStorage.getItem("listMeals"));
 
 function renderProduct(listMeals) {
